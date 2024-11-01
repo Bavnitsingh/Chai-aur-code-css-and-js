@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid-area template</title>
+    <style>
+        .box:nth-child(even){
+    background-color: aqua;
+        }
+        .box:nth-child(odd){
+    background-color: rgb(255, 94, 0);
+        }
+        .box{
+            padding: 10px;
+            display: grid;
+            gap: 10px;
+            justify-content: center;
+           
+        }
+        .grid-container{
+            background-color: beige;
+            gap: 20px;
+            grid-template-areas: 'header header header' 'sidebar main main' 'footer footer footer';
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Grid Template area</h1>
+    <div class="container">
+      <h2>This is Grid template area</h2>
+      <div class="grid-container" style="grid-template-areas: 'header header header' 'sidebar main main' 'footer footer footer';">
+        <div class="box" style="grid-area: header;  grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);">Header</div>
+        <div class="box" style="grid-area: sidebar; grid-template-columns: repeat(3,1fr);  grid-template-rows: repeat(3,1fr);">Sidebar</div>
+        <div class="box" style="grid-area: main ; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(3,1fr);">Main</div>
+        <div class="box" style="grid-area: footer ; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(3,1fr);">Footer</div>
+      </div>
+    </div>
+  </body>
+</html>

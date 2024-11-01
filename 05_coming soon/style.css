@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+body,
+html {
+  /* background-color: black; */
+  margin: 0;
+  padding: 0;
+   font-family: "Noto Sans", sans-serif;
+  height: 100%;
+  /* color: white; */
+}
+
+.container {
+  background: linear-gradient(135deg, #8a2be2, #4169e1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.content {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 350px;
+}
+.logo {
+  /* height: 75px; */
+  width: 150px;
+  object-fit: contain;
+}
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  border-radius: 5px;
+  /* border: 1px solid black */
+  margin-bottom: 15px;
+  height: 20px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+.sbmt-btn {
+  padding: 5px;
+  /* height: 20px; */
+  background-color: #8e41e1;
+  border-radius: 5px;
+  cursor: pointer;
+  color: whitesmoke;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(10, 9, 9, 0.9);
+  width: 350px;
+  align-self: center;
+}
+.sbmt-btn:hover {
+  background-color: rgb(149, 27, 149);
+}

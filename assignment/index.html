@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #043c86be;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      header h2 {
+        background-color: rgb(6, 27, 62);
+        color: gray;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+      img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .carousel-inner {
+        background-color: #8e8686;
+        box-shadow: 0 15px 30px rgba(7, 144, 223, 0.46);
+        /* border-radius: 10px; */
+      }
+      .carousel-container {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        /* box-shadow: 0 15px 30px rgba(7, 171, 204, 0.612); */
+      }
+      .copyright {
+        display: flex;
+        justify-content: center;
+        background-color: #053d5e58;
+        height: 40px;
+        padding: 10px;
+        color: #e9e5e5;
+        margin-bottom: 5px;
+      }
+      .main-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+      .product-card {
+        background-color: #172a52;
+        border-radius: 10px;
+        padding: 10px;
+        width: 90%; /* Responsive width */
+        max-width: 300px; /* Ensures the card doesn't stretch too much on large screens */
+        box-shadow: 0 4px 8px rgba(155, 126, 126, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        display: flex;
+        flex-direction: column; /* Makes content stack vertically */
+        justify-content: space-between; /* Ensures the button stays at the bottom */
+      }
+
+      .product-card__image img {
+        width: 100%;
+        height: auto; /* Allows the image to retain its natural height */
+        border-radius: 10px;
+      }
+
+      .product-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /* .product-card__btn {
+  background-color: rgb(22, 5, 5);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+} */
+      .product-card__info {
+        margin-top: auto; /* Pushes the button to the bottom */
+        text-align: center;
+      }
+      .product-card__btn:hover {
+        background-color: #0b90ddef;
+        cursor: pointer;
+      }
+      footer {
+        margin-top: 20px;
+      }
+
+      .product-card__btn {
+        padding: 10px; /* Better button padding */
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 2px;
+        background: #046dced3;
+        justify-content: center;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 100%; /* Button spans the entire width */
+        transition: background-color 0.3s;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .carousel,
+        .product-card {
+          width: 100%;
+        }
+      }
+      @media (max-width: 576px) {
+        .carousel,
+        .product-card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Youtube Videos Template</h2>
+      <div class="carousel-container">
+        <div
+          id="carouselExample"
+          class="carousel slide"
+          data-bs-interval="false"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/cards/jacket.png" class="d-block w-100" alt="jacket" />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/05_coming soon/chai-cup.png"
+                class="d-block w-100"
+                alt="chai-cup"
+              />
+            </div>
+            <div class="carousel-item">
+              <img src="/cards/watch1.png" class="d-block w-100" alt="watch" />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <!-- 1st card -->
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="cc2.png" alt="Chai-aur-code" />
+          </div>
+          <div class="product-card__info">
+            <button
+              class="product-card__btn"
+              onclick="playVideo('https://youtu.be/cHYaoI4qRUg?si=xZ1OQA-vnLhYb9TR')"
+            >
+              Play Now
+            </button>
+          </div>
+        </div>
+
+        <!-- 2nd card -->
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="/cards/cc1.png" alt="Chai-aur-code" />
+          </div>
+          <div class="product-card__info">
+            <button
+              class="product-card__btn"
+              onclick="playVideo('https://youtu.be/FxgM9k1rg0Q?si=LAguMehq6jjTPWuh')"
+            >
+              Play Now
+            </button>
+          </div>
+        </div>
+
+        <!--3rd card -->
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="cc3.png" alt="Chai-aur-code" />
+          </div>
+          <div class="product-card__info">
+            <button
+              class="product-card__btn"
+              onclick="playVideo('https://youtu.be/2JroEREiBLw?si=YB5aqfuI1WH2GA68')"
+            >
+              Play Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="copyright">
+        Copyright &copy; 2024 | All rights reserved | Chhabda Bavnit Singh
+      </p>
+    </footer>
+
+    <script>
+      function playVideo(videoUrl) {
+        window.open(videoUrl, "_blank");
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

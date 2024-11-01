@@ -1,0 +1,55 @@
+body {
+    background-color: #0e0d0d;
+  }
+  h2 {
+    margin-bottom: 10px;
+    color: #f1e5e5;
+  }
+  .nav1 {
+    background-color: #e1dbdb;
+    padding: 10px;
+    color: #b0c0cd;
+  }
+  .nav1 ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+  }
+  .nav1 li {
+    display: inline;
+  }
+  .nav1 a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    /* background-color: #896022; */
+    padding: 5px 10px;
+    position: relative;
+  }
+  .nav1 .login-button {
+    padding: 5px 10px;
+    background-color: #0d0dd8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .nav1 a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #0b14b6;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-out;
+
+  }
+  .nav1 a:hover::after{
+    transform: scaleX(1);
+  }
+  .nav1 .login-button:hover{
+    background-color: #1f0687;
+  }
